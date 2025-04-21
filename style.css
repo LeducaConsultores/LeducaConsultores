@@ -1,0 +1,466 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+  color: #1a1a1a;
+  background-image:
+    linear-gradient(135deg,#ffffff,#9b9393,#5c5a5a,#ffffff,#000000),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 2px,
+      transparent 2px,
+      transparent 6px
+    );
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url('img/encabezado4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Contenedor principal del contenido */
+  .header-content {
+    position: relative;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 1;
+  }
+  
+  /* Sección dividida en subtítulo | línea | título */
+  .header-split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    color: white;
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .logo-header {
+    width: 130px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Subtítulo (lado izquierdo) */
+  .subtitulo-header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Línea divisoria entre textos */
+  .divider {
+    width: 2px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    margin: 0 10px;
+  }
+  
+  /* Título principal (lado derecho) */
+  .titulo-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Imagen de fondo adicional si se usa */
+  .header-image {
+    position: absolute;
+    top: 60%; /* bajamos un poco más la imagen */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100px;
+    max-height: 50px;
+    z-index: 0;
+  }
+
+/* Navegación */
+.nav-cuadros {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: none;
+  }
+  
+  .nav-cuadros ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-cuadros li {
+    display: inline-block;
+  }
+  
+  .nav-cuadros .nav-link {
+    display: block;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #a4774d;
+    border-radius: 8px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-cuadros .nav-link:hover,
+  .nav-cuadros .nav-link.active {
+    background: #a4774d;
+    color: #fff;
+    border-color: #766e65;
+  }
+
+/* Secciones */
+.section {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.inicio, .servicios, .quienes-somos, .mision-vision, .politicas {
+    background-color: #ffffff;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 700px;
+    height: 4px;
+    background-color: #a4774d;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Servicios */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.servicio-item {
+    background: linear-gradient(135deg,#a4774d,#f9f9f9);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(250, 250, 250, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.servicio-item:hover {
+    transform: translateY(-10px);
+}
+
+.servicio-item i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.servicio-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.servicio-item p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Sección Quiénes Somos */
+.quienes-somos {
+    background: linear-gradient(135deg,#a4774d,#f9f9f9); 
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.quienes-somos .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quienes-somos .titulo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.quienes-somos .descripcion {
+    font-size: 1.125rem;
+    color: #8f8080; /* Color de texto negro */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección Misión y Visión */
+.mision-vision {
+    background: linear-gradient(135deg,#ffffff,#9b9393,#5c5a5a,#ffffff,#000000); 
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+}
+
+.mision-vision .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mision-vision .titulo-seccion {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.mision-vision .contenido-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Sección Misión */
+.mision, .vision {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.15); /* Fondo semi-transparente */
+    backdrop-filter: blur(4px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(99, 95, 95, 0.2);
+}
+
+.mision h3, .vision h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.mision p, .vision p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Sección Valores */
+.valores {
+    background: rgba(149, 98, 52, 0.101);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.valores .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valores .titulo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+/* Sección Valores */
+.valores {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.valores .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valores .titulo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Lista de valores */
+.valores-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.valor-item {
+    background: linear-gradient(135deg,#a4774d,#f9f9f9);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.valor-item:hover {
+    transform: translateY(-10px);
+}
+
+.valor-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.valor-item p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .mision-vision {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mision-vision .mision, .mision-vision .vision {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .valores-lista {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .valores-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ... otros estilos ... */
+.servicio-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Aquí va el nuevo bloque visual de tarjeta elegante */
+  .header, .footer, .section, .servicio-item, .quienes-somos {
+    background-color: rgba(255, 255, 255, 0.08); /* semi-transparente */
+    backdrop-filter: blur(4px); /* suaviza el fondo */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 30px;
+  }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .grid-servicios {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-servicios {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #2d2d2d;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.btn-wsp {
+    background-color: #25D366;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-wsp:hover {
+    background-color: #1ebe5d;
+}
+
+/* Botón flotante de WhatsApp */
+.wsp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 1.8rem;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
